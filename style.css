@@ -4,9 +4,16 @@
     font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
 .container {
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 20% 80%;
     grid-template-rows: 100px 120px auto;
 }
 
@@ -136,7 +143,8 @@ header > h1 {
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    gap: 40px;
 }
 
 .dashboard-header-right > button {
@@ -146,7 +154,7 @@ header > h1 {
     border: none;
     font-size: 16px;
     font-weight: bold;
-    height: 30px;
+    height: 50px;
     width: 100px;
 }
 
@@ -154,4 +162,37 @@ header > h1 {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     background-color: #E2E8F0;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.dashboard > * {
+    padding: 20px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-rows: 30px auto;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: repeat(auto-fit, 200px);
+    gap: 30px
+}
+
+.project-card {
+    display: grid;
+    grid-template-rows: auto 40px;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    height: 200px;
+    box-shadow: inset 10px 0px 0px 0px #F0B429;
+    padding: 20px;
+}
+
+.project-buttons {
+    text-align: end;
 }
