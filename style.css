@@ -7,11 +7,7 @@
 .container {
     display: grid;
     grid-template-columns: 25% 75%;
-    grid-template-rows: 60px 100px auto;
-}
-
-.container > * {
-    border: 1px solid blue;
+    grid-template-rows: 100px 120px auto;
 }
 
 .sidebar {
@@ -75,19 +71,22 @@ header > h1 {
     width: 400px;
     height: 30px;
     font-size: 16px;
-    border: 1px solid gray;
+    border: none;
+    padding-left: 10px;
     background-color: #E2E8F0;
 }
 
 .profile-picture {
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     border-radius: 100%;
 }
+
 .searchbar a {
     color: black;
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .searchbar-left {
@@ -107,9 +106,52 @@ header > h1 {
 .dashboard-header {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.dashboard-header-left {
+    display: grid;
+    grid-template-columns: 100px auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.dashboard-header-left > .profile-picture {
+    height: 100px;
+    width: 100px;
+}
+
+.dashboard-header-left > div {
+    font-weight: bold;
+}
+
+#username {
+    font-size: 36px;
+}
+.dashboard-header-right {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.dashboard-header-right > button {
+    color: white;
+    background-color: #1992D4;
+    border-radius: 40px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
 }
 
 .dashboard {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+    background-color: #E2E8F0;
 }
